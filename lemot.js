@@ -38,9 +38,7 @@ if (choix == 5){
             motReponse = "glace"
             break;
     }
-}
-
-if (choix == 6){
+} else if (choix == 6){
     let choixBanqueMot6 = Math.floor(Math.random() * 10)
     switch (choixBanqueMot6){
         case 0:
@@ -77,9 +75,7 @@ if (choix == 6){
             motReponse = "veille"
             break;
     }
-}
-
-if (choix == 7){
+} else {
     let choixBanqueMot7 = Math.floor(Math.random() * 10)
     switch (choixBanqueMot7){
         case 0:
