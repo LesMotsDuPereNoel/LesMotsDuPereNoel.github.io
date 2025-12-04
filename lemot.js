@@ -94,19 +94,19 @@ if (choix == 5){
             motReponse = "bonheur"
             break;
         case 5:
-            motReponse = "enfant"
+            motReponse = "dessert"
             break;
         case 6:
-            motReponse = "eglise"
+            motReponse = "echarpe"
             break;
         case 7:
-            motReponse = "festin"
+            motReponse = "lumiere"
             break;
         case 8:
-            motReponse = "glacon"
+            motReponse = "chanson"
             break;
         case 9:
-            motReponse = "joyeux"
+            motReponse = "chorale"
             break;
     }
 }
