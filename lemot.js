@@ -2,7 +2,9 @@ let choix = 5//extraire le vrai choix de l'html mais suppose que c'est 6
 let motReponse = ""
 
 if (choix == 5){
+    //Choisit un nombre  aléatoire de 0 à 9
     let choixBanqueMot5 = Math.floor(Math.random() * 10)
+    //Basé sur le nombre généré, choisit un mot à 5 lettres de la banque de mot ci-dessous
     switch (choixBanqueMot5){
         case 0:
             motReponse = "buche"
@@ -34,12 +36,11 @@ if (choix == 5){
         case 9:
             motReponse = "givre"
             break;
-        case 10:
-            motReponse = "glace"
-            break;
     }
 } else if (choix == 6){
+    //Choisit un nombre  aléatoire de 0 à 9
     let choixBanqueMot6 = Math.floor(Math.random() * 10)
+    //Basé sur le nombre généré, choisit un mot à 6 lettres de la banque de mot ci-dessous
     switch (choixBanqueMot6){
         case 0:
             motReponse = "cadeau"
@@ -71,12 +72,11 @@ if (choix == 5){
         case 9:
             motReponse = "joyeux"
             break;
-        case 10:
-            motReponse = "veille"
-            break;
     }
 } else {
+    //Choisit un nombre  aléatoire de 0 à 9
     let choixBanqueMot7 = Math.floor(Math.random() * 10)
+    //Basé sur le nombre généré, choisit un mot à 7 lettres de la banque de mot ci-dessous
     switch (choixBanqueMot7){
         case 0:
             motReponse = "rudolph"
@@ -88,10 +88,10 @@ if (choix == 5){
             motReponse = "souhait"
             break;
         case 3:
-            motReponse = "etoile"
+            motReponse = "famille"
             break;
         case 4:
-            motReponse = "bougie"
+            motReponse = "bonheur"
             break;
         case 5:
             motReponse = "enfant"
@@ -107,9 +107,6 @@ if (choix == 5){
             break;
         case 9:
             motReponse = "joyeux"
-            break;
-        case 10:
-            motReponse = "glace"
             break;
     }
 }
