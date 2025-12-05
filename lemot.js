@@ -1,3 +1,5 @@
+
+do{
 let choix = 5//extraire le vrai choix de l'html mais suppose que c'est 5
 let motReponse = ""
 
@@ -116,9 +118,9 @@ do{
     let motEntre = "train" //On doit extraire la variable du HTML mais supposew que c'est train
     for (let i = 0; i < motReponse.length; i++){
         if (motReponse[i] == motEntre[i]){
-            //Change la couleur de la lettre à vert si la lettre est correspondante
+            //Change la couleur de la lettre à vert si la lettre (motEntre[i]) est correspondante
         }else if (motReponse.includes(motEntre[i])){
-            //Change la couleur de la lettre à jaune
+            //Change la couleur de la lettre (motEntre[i]) à jaune si elle est dans le mot de la réponse
         }
     }
 }while ((motEntre !== motReponse) && (i <= 6))
@@ -130,3 +132,6 @@ if (i > 6){
 }
 let veuxturejouer = "Veux tu rejouer?"
 //Demande oui ou non
+let rejouer = false //Suppose que la personne ne veut pas rejouer
+//Si oui, rejoue le jeu
+}while (rejouer = true)
