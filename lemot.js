@@ -1,4 +1,4 @@
-let choix = 5//extraire le vrai choix de l'html mais suppose que c'est 6
+let choix = 5//extraire le vrai choix de l'html mais suppose que c'est 5
 let motReponse = ""
 
 if (choix == 5){
@@ -110,3 +110,23 @@ if (choix == 5){
             break;
     }
 }
+
+//Verifie les lettres du mot entré 
+do{
+    let motEntre = "train" //On doit extraire la variable du HTML mais supposew que c'est train
+    for (let i = 0; i < motReponse.length; i++){
+        if (motReponse[i] == motEntre[i]){
+            //Change la couleur de la lettre à vert si la lettre est correspondante
+        }else if (motReponse.includes(motEntre[i])){
+            //Change la couleur de la lettre à jaune
+        }
+    }
+}while ((motEntre !== motReponse) && (i <= 6))
+
+if (i > 6){
+    let pasReussi = "Malheureusement, tu n'as pas réussi, le mot était " + motReponse
+}else{
+    let reussi = "Bravo! Tu as réussi les mots du père noël!"
+}
+let veuxturejouer = "Veux tu rejouer?"
+//Demande oui ou non
