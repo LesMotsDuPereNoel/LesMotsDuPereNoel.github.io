@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Les mots du Père Noël!</title>
-<!--Code pour la barre de navigation  :https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar-->
+<!--Code pour la barre d'instructions  :https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -16,7 +16,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #65d6ba;
+  background-color: #9fb6e2;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -27,7 +27,7 @@ body {
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: block;
+  display: flex;
   transition: 0.3s;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 #main {
-  transition: margin-left .5s;
+  transition: margin-left .2s;
   padding: 16px;
 }
 
@@ -66,15 +66,19 @@ body {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
 </style>
 </head>
-<body>
+<body style="background-color:  #F8F8FF;">
+
+<center><h1>Les Mots du Père Noël</h1></center>
+<center><h2>Choisissez votre niveau de difficulté :</h2></center>
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <center><h4>Comment jouer ?</h4>
   <p>Ce jeu reprend exactement le même concept que le Wordle, mais en français avec le thématique d'hiver et Noël. Chaque jeu, un mot de la longueur de 5, 6 ou 7 lettres est choisi aléatoirement. 
-        Vous devez le deviner en 6 essais. À chaque essai, les lettres du mot que vous avez proposé changeront de couleur en fonction de à quel point vous êtes proche de le trouver.</p></center>
+        Vous devez le deviner en 6 essais. À chaque essai, les lettres du mot que vous avez proposé changeront de couleur en fonction de à quel point vous êtes proche de le trouver. Si un lettre devient vert : Cette lettre est dans la bonne place. Si un lettre devient jaune : Cette lettre est dans le mot mais dans la mauvaise place.</p></center>
 </div>
 
 <div id="main">
@@ -91,7 +95,8 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
+
 </script>
 </body>
 </html> 
-<!--Auteurs : Richard, Emilio et Christopher-->
+<!--Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette-->
