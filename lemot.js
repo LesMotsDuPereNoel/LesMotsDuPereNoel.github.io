@@ -125,12 +125,16 @@ do{
 }while ((motEntre !== motReponse) && (i <= 6))
 
 if (i > 6){
+    let affichePasReussi = document.getElementById("divAffichePasReussi");
     let pasReussi = "Malheureusement, tu n'as pas réussi, le mot était " + motReponse
+    affichePasReussi.innerHTML = pasReussi;
 }else{
+    let afficheReussi = document.getElementById("divAfficheReussi");
     let reussi = "Bravo! Tu as réussi les mots du père noël!"
+    afficheReussi.innerHTML = reussi;
 }
 let veuxturejouer = "Veux tu rejouer?"
 //Demande oui ou non
 let rejouer = false //Suppose que la personne ne veut pas rejouer
 //Si oui, rejoue le jeu
-}while (rejouer == true)
+}while (rejouer = true)
