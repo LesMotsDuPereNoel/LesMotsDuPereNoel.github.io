@@ -1,3 +1,4 @@
+
 do{
 let choix = 5//extraire le vrai choix de l'html mais suppose que c'est 5
 let motReponse = ""
