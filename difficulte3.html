@@ -21,12 +21,7 @@
     <button class="openbtn" onclick="openNav()"> Instructions</button>  
     </div>
 
-    <script> // Source pour la fonction qui fait que quand tu tappes, tu vas au prochain textbox : https://stackoverflow.com/questions/1959398/moving-a-focus-when-the-input-text-field-reaches-a-max-length
-     function moveOnMax(field, nextFieldID) {
-      if (field.value.length >= field.maxLength) {
-        document.getElementById(nextFieldID).focus();
-      }
-    }</script>
+<script src="script.js"></script>
             <center><h1>Les Mots du Père Noël</h1></center>
             <center><h2>Difficulté : 7 Lettres et 1 Indice</h2></center>
             <center><table border="1">
@@ -86,16 +81,5 @@
                     <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite42" size = "1" maxlength="1" style="border: none"/></center></td>
             </tbody>
             </table></center>
-            <script>      
-    function openNav() {
-    document.getElementById("mySidebar").style.width = "400px";
-    document.getElementById("main").style.marginLeft = "250px";
-    }
-
-    function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    }
-        </script>
         </body>
 </html>
