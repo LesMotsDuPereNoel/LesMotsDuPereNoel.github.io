@@ -123,7 +123,7 @@ do{
 
     //Verifie les lettres du mot entré 
     do{
-        let motEntre = "train" //On doit extraire la variable du HTML mais supposew que c'est train
+        let motEntre = document.getElementById("boite1").value + document.getElementById("boite2").value + document.getElementById("boite3").value + document.getElementById("boite4").value + document.getElementById("boite1").value//On doit extraire la variable du HTML mais supposew que c'est train
         for (let i = 0; i < motReponse.length; i++){
             if (motReponse[i] == motEntre[i]){
                 //Change la couleur de la lettre à vert si la lettre (motEntre[i]) est correspondante
