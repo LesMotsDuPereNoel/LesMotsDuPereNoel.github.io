@@ -21,58 +21,62 @@
     <button class="openbtn" onclick="openNav()"> Instructions</button>  
     </div>
 
+    <script>  function moveOnMax(field, nextFieldID) {
+      if (field.value.length >= field.maxLength) {
+        document.getElementById(nextFieldID).focus();
+      }
+    }</script>
             <center><h1>Les Mots du Père Noël</h1></center>
             <center><h2>Difficulté : 6 Lettres et 2 Indices</h2></center>
             <center><table border="1">
             <tbody>
                 
                 <tr>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite2')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite3')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite4')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite5')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite6')"style="border: none"/></center></td>
                     <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite6" size = "1" maxlength="1" style="border: none"/></center></td>
                 </tr>
                 <tr>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite6" size = "1" maxlength="1" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite7" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite8')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite8" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite9')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite9" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite10')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite10" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite11')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite11" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite12')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite12" size = "1" maxlength="1" style="border: none"/></center></td>
                 </tr>
                 <tr>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite6" size = "1" maxlength="1" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite13" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite14')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite14" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite15')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite15" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite16')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite16" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite17')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite17" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite18')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite18" size = "1" maxlength="1" style="border: none"/></center></td>
                 </tr>
                 <tr>
-                      <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite6" size = "1" maxlength="1" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite19" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite20')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite20" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite21')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite21" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite22')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite22" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite23')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite23" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite24')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite24" size = "1" maxlength="1" style="border: none"/></center></td>
                 </tr>
                 <tr>
-                      <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite6" size = "1" maxlength="1" style="border: none"/></center></td>
+                     <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite25" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite26')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite26" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite27')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite27" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite28')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite28" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite29')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite29" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite30')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite30" size = "1" maxlength="1" style="border: none"/></center></td>
                 <tr>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite1" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite2" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite3" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite4" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite5" size = "1" maxlength="1" style="border: none"/></center></td>
-                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite6" size = "1" maxlength="1" style="border: none"/></center></td>
-                </tr>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite31" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite32')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite32" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite33')" style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite33" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite34')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite34" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite35')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite35" size = "1" maxlength="1" onkeyup="moveOnMax(this, 'boite36')"style="border: none"/></center></td>
+                    <td width = "75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center" id ="boite36" size = "1" maxlength="1" style="border: none"/></center></td>
             </tbody>
             </table></center>
             <script>      

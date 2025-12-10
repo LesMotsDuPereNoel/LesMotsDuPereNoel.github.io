@@ -21,7 +21,8 @@
     <button class="openbtn" onclick="openNav()"> Instructions</button>  
     </div>
 
-    <script>  function moveOnMax(field, nextFieldID) {
+    <script> // Source pour la fonction qui fait que quand tu tappes, tu vas au prochain textbox : https://stackoverflow.com/questions/1959398/moving-a-focus-when-the-input-text-field-reaches-a-max-length
+     function moveOnMax(field, nextFieldID) {
       if (field.value.length >= field.maxLength) {
         document.getElementById(nextFieldID).focus();
       }
