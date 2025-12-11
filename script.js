@@ -13,3 +13,31 @@ function moveOnMax(field, nextFieldID)  {
         document.getElementById(nextFieldID).focus()
       }
     }
+
+//Fonction pour vérifier si le mot entré correspond au mot secret
+if (choix == 5) {
+function vérifieMotEntre5 () {
+//Verifie les lettres du mot entré 
+        let motEntre = document.getElementById("boite1").value + document.getElementById("boite2").value + document.getElementById("boite3").value + document.getElementById("boite4").value + document.getElementById("boite5").value
+        for (let i = 0; i < motReponse.length; i++){
+            if (motReponse[i] == motEntre[i]){
+                //Change la couleur de la lettre à vert si la lettre (motEntre[i]) est correspondante
+
+            }else if (motReponse.includes(motEntre[i])){
+                //Change la couleur de la lettre (motEntre[i]) à jaune si elle est dans le mot de la réponse
+            }
+        }
+    while ((motEntre !== motReponse) && (i <= 6)) {
+
+    if (i > 6){
+        let affichePasReussi = document.getElementById("divAffichePasReussi");
+        let pasReussi = "Malheureusement, tu n'as pas réussi, le mot était " + motReponse
+        affichePasReussi.innerHTML = pasReussi;
+    } else {
+        let afficheReussi = document.getElementById("divAfficheReussi");
+        let reussi = "Bravo! Tu as réussi les mots du père noël!"
+        afficheReussi.innerHTML = reussi;
+      }
+    }
+  }
+}
