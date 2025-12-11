@@ -42,12 +42,7 @@ function choix5(){
 }
 function choix6(){
     choix = 6
-}
-function choix7(){
-    choix = 7
-}
 
-if (choix == 6){
             //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot6 = Math.floor(Math.random() * 10)
             //Basé sur le nombre généré, choisit un mot à 6 lettres de la banque de mot ci-dessous
@@ -83,7 +78,10 @@ if (choix == 6){
                     motReponse = "joyeux"
                     break;
             }
-} else {
+}
+function choix7(){
+    choix = 7
+
             //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot7 = Math.floor(Math.random() * 10)
             //Basé sur le nombre généré, choisit un mot à 7 lettres de la banque de mot ci-dessous
