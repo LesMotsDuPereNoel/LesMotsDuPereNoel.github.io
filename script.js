@@ -13,14 +13,19 @@ function moveOnMax(field, nextFieldID)  {
         document.getElementById(nextFieldID).focus()
       }
     }
+function changeCouleurVert(i){
+  let boite = document.getElementById("boite1")
+  boite.style.backgroundColor = "#33e863"
+}
 
 //Fonction pour vérifier si le mot entré correspond au mot secret
 if (choix == 5) {
-function vérifieMotEntre5 () {
+function verifieMotEntre5() {
 //Verifie les lettres du mot entré 
         let motEntre = document.getElementById("boite1").value + document.getElementById("boite2").value + document.getElementById("boite3").value + document.getElementById("boite4").value + document.getElementById("boite5").value
         for (let i = 0; i < motReponse.length; i++){
             if (motReponse[i] == motEntre[i]){
+              changeCouleurVert()
                 //Change la couleur de la lettre à vert si la lettre (motEntre[i]) est correspondante
 
             }else if (motReponse.includes(motEntre[i])){

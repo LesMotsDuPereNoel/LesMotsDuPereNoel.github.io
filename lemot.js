@@ -1,16 +1,9 @@
 let choix = 0//extraire le vrai choix de l'html mais suppose que c'est 5
 function choix5(){
     choix = 5
-}
-function choix6(){
-    choix = 6
-}
-function choix7(){
-    choix = 7
-}
-let motReponse = ""
+    let motReponse = ""
 
-if (choix == 5){
+
     //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot5 = Math.floor(Math.random() * 10)
             //Basé sur le nombre généré, choisit un mot à 5 lettres de la banque de mot ci-dessous
@@ -46,7 +39,15 @@ if (choix == 5){
                     motReponse = "givre"
                     break;
             }
-} else if (choix == 6){
+}
+function choix6(){
+    choix = 6
+}
+function choix7(){
+    choix = 7
+}
+
+if (choix == 6){
             //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot6 = Math.floor(Math.random() * 10)
             //Basé sur le nombre généré, choisit un mot à 6 lettres de la banque de mot ci-dessous
