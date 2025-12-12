@@ -41,7 +41,6 @@ function choix5(){
             localStorage.setItem("mot5", motReponse);
 }
 function choix6(){
-    choix = 6
 
             //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot6 = Math.floor(Math.random() * 10)
@@ -78,9 +77,9 @@ function choix6(){
                     motReponse = "joyeux"
                     break;
             }
+            localStorage.setItem("mot6", motReponse);
 }
 function choix7(){
-    choix = 7
 
             //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot7 = Math.floor(Math.random() * 10)
@@ -117,4 +116,5 @@ function choix7(){
                     motReponse = "chorale"
                     break;
     }
+    localStorage.setItem("mot7", motReponse);
 }
