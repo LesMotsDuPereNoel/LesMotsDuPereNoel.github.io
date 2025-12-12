@@ -38,6 +38,8 @@ function choix5(){
                 case 9:
                     motReponse = "givre"
                     break;
+                
+                localStorage.setItem("mot5", motReponse);
             }
 }
 function choix6(){
