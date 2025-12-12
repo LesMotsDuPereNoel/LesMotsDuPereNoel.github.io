@@ -14,7 +14,8 @@ function moveOnMax(field, nextFieldID)  {
       }
     }
 function changeCouleurVert(i){
-  let boite = document.getElementById("boite1")
+  let boite = document.getElementById(window["boite" + i]);
+  //Source pour window : https://stackoverflow.com/questions/3294262/difference-between-window-and-eval-javascript
   boite.style.backgroundColor = "#33e863"
 }
 
