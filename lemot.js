@@ -1,8 +1,5 @@
 let choix = 0//extraire le vrai choix de l'html mais suppose que c'est 5
 function choix5(){
-    choix = 5
-    let motReponse = ""
-
 
     //Choisit un nombre  aléatoire de 0 à 9
             let choixBanqueMot5 = Math.floor(Math.random() * 10)
@@ -40,8 +37,8 @@ function choix5(){
                     break;
                 return motReponse;
 
-                localStorage.setItem("mot5", motReponse);
             }
+            localStorage.setItem("mot5", motReponse);
 }
 function choix6(){
     choix = 6
