@@ -118,3 +118,32 @@ function choix7(){
     }
     localStorage.setItem("mot7", motReponse);
 }
+
+//Nombre d'essaies
+let essaies = 0;
+//Nombre d'essaies maximum
+let maxEssaies = 6;
+
+//Fonction principale pour vérifier si le mot entré est dans une rangée donné
+function verifieMotEntre(range) {
+  //Construire le mot à partir des cases de la rangée donné
+  let motEntre = "";
+  for (let i = 1; i < 5; i++) {
+    let caseId = "boite" + i + "-" + "range";
+    motEntre += document.getElementById(caseId).value.toLowerCase()
+}
+
+//Vérifie que l'utilisateur a rempli les 5 lettres dans le mot
+if (motEntre.length !== 5) {
+    "Veuillez entrer un mot de 5 lettres"
+    return;
+}
+
+//Vérifie chaque lettre
+for (let i = 1; i < 5; i++) {
+    
+}
+
+
+}
+
