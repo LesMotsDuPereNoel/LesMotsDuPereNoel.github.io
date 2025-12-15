@@ -29,7 +29,7 @@ function changeCouleurJaune(i){
 }
 
 //Fonction pour vérifier si le mot entré correspond au mot secret
-if (choix == 5) {
+/*if (choix == 5) {
   let essai = 0
   function verifieMotEntre5() {
     //Verifie les lettres du mot entré 
@@ -57,4 +57,5 @@ if (i > 6){
   afficheReussi.innerHTML = reussi;
 }
 }
+*/ 
   
