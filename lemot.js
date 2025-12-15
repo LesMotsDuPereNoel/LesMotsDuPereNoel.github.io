@@ -125,11 +125,11 @@ let essaies = 0;
 let maxEssaies = 6;
 
 //Fonction principale pour vérifier si le mot entré est dans une rangée donné
-function verifieMotEntre(range) {
+function verifieMotEntre(range, longueur) {
   //Construire le mot à partir des cases de la rangée donné
   let motEntre = "";
-  for (let i = 1; i < 5; i++) {
-    let caseId = "boite" + i + "-" + "range";
+  for (let i = 1; i < longueur; i++) {
+    let caseId = "boite" + i + "-" + range;
     motEntre += document.getElementById(caseId).value.toLowerCase()
 }
 
