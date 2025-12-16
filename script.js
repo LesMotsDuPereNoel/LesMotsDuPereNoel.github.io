@@ -15,15 +15,15 @@ function moveOnMax(field, nextFieldID)  {
     }
 
 //Fonction qui change la couleur de la boite à vert
-function changeCouleurVert(i){
-  let boite = document.getElementById(window["boite" + (i + 1)]);
+function changeCouleurVert(numBoite){
+  let boite = document.getElementById(window["boite" + (numboite + 1)]);
   //Source pour window : https://stackoverflow.com/questions/3294262/difference-between-window-and-eval-javascript
   boite.style.backgroundColor = "#33e863"
 }
 
 //Fonction qui change la couleur de la boite à jaune
-function changeCouleurJaune(i){
-  let boite = document.getElementById(window["boite" + (i + 1)]);
+function changeCouleurJaune(numBoite){
+  let boite = document.getElementById(window["boite" + (numBoite + 1)]);
   //Source pour window : https://stackoverflow.com/questions/3294262/difference-between-window-and-eval-javascript
   boite.style.backgroundColor = "#ebde2fff"
 }
