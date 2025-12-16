@@ -126,24 +126,43 @@ let maxEssaies = 6;
 
 //Fonction principale pour vérifier si le mot entré est dans une rangée donné
 function verifieMotEntre(range, longueur) {
-  //Construire le mot à partir des cases de la rangée donné
-  let motEntre = "";
-  for (let i = 1; i < longueur; i++) {
-    let caseId = "boite" + i + "-" + range;
-    motEntre += document.getElementById(caseId).value.toLowerCase()
-}
+  
+    //Construire le mot à partir des cases de la rangée donné
+    let motEntre = "";
+    for (let i = 1; i < longueur; i++) {
+        let caseId = "boite" + i + "-" + range;
+        motEntre += document.getElementById(caseId).value.toLowerCase()
+    }
 
-//Vérifie que l'utilisateur a rempli les 5 lettres dans le mot
-if (motEntre.length !== 5) {
-    "Veuillez entrer un mot de 5 lettres"
-    return;
-}
+    //Vérifie que l'utilisateur a rempli les 5 lettres dans le mot
+    if (motEntre.length !== longueur) {
+        let message = document.getElementById("divMessage");
+        message.innerHTML = ("Veuillez entrer un mot de 5 lettres")
+        return;
+    }
 
-//Vérifie chaque lettre
-for (let i = 1; i < 5; i++) {
+    //Vérifie chaque lettre
+    for (let i = 1; i < longueur; i++) {
+        let caseId = "boite" + i + "-" + range;
+        if (motEntre[i - 1] === motReponse[i - 1]) {
+            changeCouleurVert(caseId) //Lettre correcte placée dans la bonne place
+        } else if (motReponse.includes(motEntre[i - 1])) {
+            changeCouleurJaune(caseId) //Letre correcte mais mal placée
+        }
+    }
+
+    //Incrémenter le nombres d'essaies
+    essaies++
+
+    //Vérifie si l'utilisateur a deviner le mot
+    if (motEntre === motReponse) {
+        document.getElementById(divAfficheReussi) = "Bravo! Tu as réussi les mots du père noël!"
+    }
+
+    //Vérifie si l'utilisateur n'a pas devier le mot
+    if (essaies >= maxEssaies) {
+        document.getElementById(divAffichePasReussi) = ("Malheureusement, tu n'as pas réussi, le mot était " + motReponse)
+    }
+}
     
-}
-
-
-}
-
+// Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
