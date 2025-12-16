@@ -126,13 +126,19 @@ let maxEssaies = 6;
 
 //Fonction principale pour vérifier si le mot entré est dans une rangée donné
 function verifieMotEntre(range, longueur) {
-  
+    
+
+    let tblMotEntre = document.GetElementsByName("range1");
+    let motEntre = ""
+    for (let i = 0; i < longueur; i++){
+        motEntre = motEntre + tblMotEntre[i]
+    }
     //Construire le mot à partir des cases de la rangée donné
-    let motEntre = "";
+    /*let motEntre = "";
     for (let i = 1; i < longueur; i++) {
         let caseId = "boite" + i + "-" + range;
         motEntre += document.getElementById(caseId).value.toLowerCase()
-    }
+    }*/
 
     //Vérifie que l'utilisateur a rempli les 5 lettres dans le mot
     if (motEntre.length !== longueur) {
