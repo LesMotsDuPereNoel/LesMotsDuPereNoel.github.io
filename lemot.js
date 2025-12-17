@@ -40,6 +40,7 @@ function choix5(){
             }
             localStorage.setItem("mot5", motReponse);
 }
+
 function choix6(){
 
             //Choisit un nombre  aléatoire de 0 à 9
@@ -79,6 +80,7 @@ function choix6(){
             }
             localStorage.setItem("mot6", motReponse);
 }
+
 function choix7(){
 
             //Choisit un nombre  aléatoire de 0 à 9
@@ -119,56 +121,45 @@ function choix7(){
     localStorage.setItem("mot7", motReponse);
 }
 
-//Nombre d'essaies
-let essaies = 0;
-//Nombre d'essaies maximum
-let maxEssaies = 6;
-
-//Fonction principale pour vérifier si le mot entré est dans une rangée donné
-/*function verifieMotEntre(range, longueur) {
+//Fonction principale pour vérifier si l'utilisateur a deviner le mot
+function verifieMotEntre(ligne,longueur){
     
-
-    let tblMotEntre = document.GetElementsByName("range1");
-    let motEntre = ""
-    for (let i = 0; i < longueur; i++){
-        motEntre = motEntre + tblMotEntre[i]
+    //Dépendant de la longueur, le mot secret ce fait choisir.
+    let motReponse = "";
+    if (longueur == 5){
+        motReponse = localStorage.getItem(mot5).toUpperCase();
+    } else if (longueur == 6){
+        motReponse = localStorage.getItem(mot6).toUpperCase();
+    } else {
+        motReponse = localStorage.getItem(mot7).toUpperCase();
     }
-    //Construire le mot à partir des cases de la rangée donné
+    
+    let debut = (ligne - 1) * longueur + 1;
     let motEntre = "";
-    for (let i = 1; i < longueur; i++) {
-        let caseId = "boite" + i + "-" + range;
-        motEntre += document.getElementById(caseId).value.toLowerCase()
+
+    //Lire le mot entré
+    for (let i = 0; i < longueur; i++) {
+        motEntre += document.getElementById("boite" + (debut + i)).value;
     }
 
-    //Vérifie que l'utilisateur a rempli les 5 lettres dans le mot
-    if (motEntre.length !== longueur) {
-        let message = document.getElementById("divMessage");
-        message.innerHTML = ("Veuillez entrer un mot de 5 lettres")
-        return;
-    }
+    //Vérification des lettres
+    for (let i = 0; i < longueur; i++) {
+        let boite = document.getElementById("boite" + (debut + i));
+        let lettre = motEntre[i];
 
-    //Vérifie chaque lettre
-    for (let i = 1; i < longueur; i++) {
-        let caseId = "boite" + i + "-" + range;
-        if (motEntre[i - 1] === motReponse[i - 1]) {
-            changeCouleurVert(caseId) //Lettre correcte placée dans la bonne place
-        } else if (motReponse.includes(motEntre[i - 1])) {
-            changeCouleurJaune(caseId) //Letre correcte mais mal placée
+        if (lettre === motReponse[i]) {
+            //Lettre est dans la bonne place
+            boite.style.backgroundColor("green");
+        } else if (motReponse.includes(lettre)) {
+            //Lettre dans le mot, mais mauvais place
+            boite.style.backgroundColor("gold");
+        } else {
+            //Lettre qui n'est pas dans le mot
+            boite.style.backgroundColor("grey");
         }
     }
-
-    //Incrémenter le nombres d'essaies
-    essaies++
-
-    //Vérifie si l'utilisateur a deviner le mot
-    if (motEntre === motReponse) {
-        document.getElementById(divAfficheReussi) = "Bravo! Tu as réussi les mots du père noël!"
-    }
-
-    //Vérifie si l'utilisateur n'a pas devier le mot
-    if (essaies >= maxEssaies) {
-        document.getElementById(divAffichePasReussi) = ("Malheureusement, tu n'as pas réussi, le mot était " + motReponse)
-    }
+    /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
+        boite.disabled = true;
 }
-    */ 
+
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
