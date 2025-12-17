@@ -14,66 +14,21 @@ function moveOnMax(field, nextFieldID)  {
       }
     }
 
-//Fonction qui change la couleur de la boite à vert
-function changeCouleurVert(numBoite){
-  let boite = document.getElementById(window["boite" + (numboite + 1)]);
-  //Source pour window : https://stackoverflow.com/questions/3294262/difference-between-window-and-eval-javascript
-  boite.style.backgroundColor = "#33e863"
-}
-
-//Fonction qui change la couleur de la boite à jaune
-function changeCouleurJaune(numBoite){
-  let boite = document.getElementById(window["boite" + (numBoite + 1)]);
-  //Source pour window : https://stackoverflow.com/questions/3294262/difference-between-window-and-eval-javascript
-  boite.style.backgroundColor = "#ebde2fff"
-}
-
-//Fonction pour vérifier si le mot entré correspond au mot secret
-/*if (choix == 5) {
-  let essai = 0
-  function verifieMotEntre5() {
-    //Verifie les lettres du mot entré 
-    let motEntre = document.getElementById("boite1").value + document.getElementById("boite2").value + document.getElementById("boite3").value + document.getElementById("boite4").value + document.getElementById("boite5").value
-    for (let i = 0; i < motReponse.length; i++){
-      if (motReponse[i] == motEntre[i]){
-        //Change la couleur de la lettre à vert si la lettre (motEntre[i]) est correspondante
-        changeCouleurVert(i)
-
-      }else if (motReponse.includes(motEntre[i])){
-        //Change la couleur de la lettre (motEntre[i]) à jaune si elle est dans le mot de la réponse
-        changeCouleurJaune(i)
-      }
-    }
-  essai++
-}
-
-if (i > 6){
-  let affichePasReussi = document.getElementById("divAffichePasReussi");
-  let pasReussi = "Malheureusement, tu n'as pas réussi, le mot était " + motReponse
-  affichePasReussi.innerHTML = pasReussi;
-} else {
-  let afficheReussi = document.getElementById("divAfficheReussi");
-  let reussi = "Bravo! Tu as réussi les mots du père noël!"
-  afficheReussi.innerHTML = reussi;
-}
-}
-*/ 
-
 //Fonction qui demande une question pour reçevoir un indice
 function indice(longueur, numIndice){
   switch(true){
     case ((longueur == 5) && (numIndice == 1)):
       // Récupérer le bouton et l'élément pour afficher le résultat
-      const paragrapheResultat1 = document.getElementById('resultat1')
+      let paragrapheResultat1 = document.getElementById("resultat1")
       // Afficher une boîte de dialogue pour demander une entrée
-      const entreeUtilisateur1 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
+      let entreeUtilisateur1 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
       // Vérifier si l'utilisateur a entré quelque chose (pas annulé ni vide) et c'est
-      if ((entreeUtilisateur1 !== null) && (entreeUtilisateur1 !== "") && (entreeUtilisateur1 == 5)) {
+      if ((entreeUtilisateur1 !== null) && (entreeUtilisateur1 !== "") && (entreeUtilisateur1 == 2)) {
           // Afficher le résultat sur la page
           paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement(mot5[0]).toUpperCase();
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
-      } else if (entreeUtilisateur1 !== 5){
+      } else if (entreeUtilisateur1 !== 2){
           paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse.";
       }
         else {
