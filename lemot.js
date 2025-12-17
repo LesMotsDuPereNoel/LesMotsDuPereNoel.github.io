@@ -40,6 +40,7 @@ function choix5(){
             }
             localStorage.setItem("mot5", motReponse);
 }
+
 function choix6(){
 
             //Choisit un nombre  aléatoire de 0 à 9
@@ -79,6 +80,7 @@ function choix6(){
             }
             localStorage.setItem("mot6", motReponse);
 }
+
 function choix7(){
 
             //Choisit un nombre  aléatoire de 0 à 9
@@ -126,7 +128,7 @@ function verifieMotEntre(ligne,longueur){
     let motReponse = "";
     if (longueur == 5){
         motReponse = localStorage.getItem(mot5);
-    }else if (longueur == 6){
+    } else if (longueur == 6){
         motReponse = localStorage.getItem(mot6);
     } else {
         motReponse = localStorage.getItem(mot7);
@@ -137,7 +139,22 @@ function verifieMotEntre(ligne,longueur){
     let motEntre = "";
 
     //Lire le mot entré
-    
+    for (let i = 0; i < longueur; i++) {
+        let boite = document.getElementById("boite" + (debut + i));
+        let lettre = motEntre[i];
+
+        if (lettre === motReponse[i]) {
+            //Lettre est dans la bonne place
+            boite.style.backgroundColor("green");
+        } else if (lettre.includes(motReponse[i])) {
+            //Lettre dans le mot, mais mauvais place
+            boite.style.backgroundColor("gold");
+        } else {
+            //Lettre qui n'est pas dans le mot
+            boite.style.backgroundColor("grey");
+        }
+        boite.disabled = true;
+    }
 
 }
 
