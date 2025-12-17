@@ -142,24 +142,24 @@ function verifieMotEntre(ligne,longueur){
         motEntre += document.getElementById("boite" + (debut + i)).value;
     }
 
-    //Vérification des lettres
+    //Vérifie chaque lettre
     for (let i = 0; i < longueur; i++) {
         let boite = document.getElementById("boite" + (debut + i));
         let lettre = motEntre[i];
 
         if (lettre === motReponse[i]) {
-            //Lettre est dans la bonne place
+            //Si la lettre est dans la bonne place, il change la couleur de l'arrière plan en vert
             boite.style.backgroundColor ="green";
         } else if (motReponse.includes(lettre)) {
-            //Lettre dans le mot, mais mauvais place
+            //Si la lettre est dans le mot mais dans la mauvaise place, il change l'arrière plan en jaune
             boite.style.backgroundColor = "gold";
         } else {
-            //Lettre qui n'est pas dans le mot
+            //Si la lettre n'est pas dans le mot, met la couleur en gris
             boite.style.backgroundColor = "grey";
         }
-    }
-    /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
+        /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
         boite.disabled = true;
+    }
 }
 
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
