@@ -160,6 +160,12 @@ function verifieMotEntre(ligne,longueur){
         /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
         boite.disabled = true;
     }
+    toggleRow(2)
 }
-
+function toggleRow(rowId){
+    for (let i = 1; i<longueur;i++){
+        var row = document.getElementById(rowId)
+        row.classList.toggle("active");
+    }
+}
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
