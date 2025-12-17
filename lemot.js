@@ -172,3 +172,15 @@ let maxEssaies = 6;
 }
     */ 
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
+function verifieMotEntre(ligne,longueur){
+    //Dépendant de la longueur, le mot secret ce fait choisir.
+    let motReponse = ''
+    if (longueur == 5){
+        motReponse = localStorage.getItem(mot5)
+    }else if (longueur == 6){
+        motReponse = localStorage.getItem(mot6)
+    } else {
+        motREponse = localStorage.getItem(mot7)
+    }
+
+}
