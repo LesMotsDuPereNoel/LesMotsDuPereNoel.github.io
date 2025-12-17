@@ -153,6 +153,7 @@ function verifieMotEntre(ligne,longueur){
             //Lettre qui n'est pas dans le mot
             boite.style.backgroundColor("grey");
         }
+        /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
         boite.disabled = true;
     }
 
