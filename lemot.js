@@ -127,13 +127,12 @@ function verifieMotEntre(ligne,longueur){
     //Dépendant de la longueur, le mot secret ce fait choisir.
     let motReponse = "";
     if (longueur == 5){
-        motReponse = localStorage.getItem(mot5);
+        motReponse = localStorage.getItem(mot5).toUpperCase();
     } else if (longueur == 6){
-        motReponse = localStorage.getItem(mot6);
+        motReponse = localStorage.getItem(mot6).toUpperCase();
     } else {
-        motReponse = localStorage.getItem(mot7);
+        motReponse = localStorage.getItem(mot7).toUpperCase();
     }
-    motReponse = motReponse.toUpperCase();
     
     let debut = (ligne - 1) * longueur + 1;
     let motEntre = "";
@@ -146,7 +145,7 @@ function verifieMotEntre(ligne,longueur){
         if (lettre === motReponse[i]) {
             //Lettre est dans la bonne place
             boite.style.backgroundColor("green");
-        } else if (motReponse[i].includes(lettre)) {
+        } else if (motReponse.includes(lettre)) {
             //Lettre dans le mot, mais mauvais place
             boite.style.backgroundColor("gold");
         } else {
