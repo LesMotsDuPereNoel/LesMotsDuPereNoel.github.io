@@ -136,6 +136,7 @@ function verifieMotEntre(ligne,longueur){
     
     let debut = (ligne - 1) * longueur + 1;
     let motEntre = "";
+
     //Lire le mot entré
     for (let i = 0; i < longueur; i++) {
         motEntre += document.getElementById("boite" + (debut + i)).value;
@@ -156,10 +157,9 @@ function verifieMotEntre(ligne,longueur){
             //Lettre qui n'est pas dans le mot
             boite.style.backgroundColor("grey");
         }
-        /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
-        boite.disabled = true;
     }
-
+    /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
+        boite.disabled = true;
 }
 
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
