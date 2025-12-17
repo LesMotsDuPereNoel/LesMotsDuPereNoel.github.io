@@ -146,7 +146,7 @@ function verifieMotEntre(ligne,longueur){
         if (lettre === motReponse[i]) {
             //Lettre est dans la bonne place
             boite.style.backgroundColor("green");
-        } else if (lettre.includes(motReponse[i])) {
+        } else if (motReponse[i].includes(lettre)) {
             //Lettre dans le mot, mais mauvais place
             boite.style.backgroundColor("gold");
         } else {
