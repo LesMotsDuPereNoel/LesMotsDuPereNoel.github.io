@@ -127,11 +127,11 @@ function verifieMotEntre(ligne,longueur){
     //Dépendant de la longueur, le mot secret ce fait choisir.
     let motReponse = "";
     if (longueur == 5){
-        motReponse = localStorage.getItem(mot5).toUpperCase();
+        motReponse = localStorage.getItem("mot5").toUpperCase();
     } else if (longueur == 6){
-        motReponse = localStorage.getItem(mot6).toUpperCase();
+        motReponse = localStorage.getItem("mot6").toUpperCase();
     } else {
-        motReponse = localStorage.getItem(mot7).toUpperCase();
+        motReponse = localStorage.getItem("mot7").toUpperCase();
     }
     
     let debut = (ligne - 1) * longueur + 1;
