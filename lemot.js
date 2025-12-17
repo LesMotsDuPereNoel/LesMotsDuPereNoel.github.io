@@ -127,11 +127,11 @@ function verifieMotEntre(ligne,longueur){
     //Dépendant de la longueur, le mot secret ce fait choisir.
     let motReponse = "";
     if (longueur == 5){
-        motReponse = localStorage.getItem(mot5).toUpperCase();
+        motReponse = localStorage.getItem("mot5").toUpperCase();
     } else if (longueur == 6){
-        motReponse = localStorage.getItem(mot6).toUpperCase();
+        motReponse = localStorage.getItem("mot6").toUpperCase();
     } else {
-        motReponse = localStorage.getItem(mot7).toUpperCase();
+        motReponse = localStorage.getItem("mot7").toUpperCase();
     }
     
     let debut = (ligne - 1) * longueur + 1;
@@ -149,13 +149,13 @@ function verifieMotEntre(ligne,longueur){
 
         if (lettre === motReponse[i]) {
             //Lettre est dans la bonne place
-            boite.style.backgroundColor("green");
+            boite.style.backgroundColor ="green";
         } else if (motReponse.includes(lettre)) {
             //Lettre dans le mot, mais mauvais place
-            boite.style.backgroundColor("gold");
+            boite.style.backgroundColor = "gold";
         } else {
             //Lettre qui n'est pas dans le mot
-            boite.style.backgroundColor("grey");
+            boite.style.backgroundColor = "grey";
         }
     }
     /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
