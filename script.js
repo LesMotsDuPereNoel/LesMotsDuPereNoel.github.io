@@ -30,8 +30,7 @@ function indice(longueur, numIndice){
           paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur1 !== 2){
           paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse.";
-      }
-        else {
+      } else {
           paragrapheResultat1.textContent = "Vous avez annulé la saisie.";
       }
       break;
