@@ -22,16 +22,33 @@ function indice(longueur, numIndice){
       let paragrapheResultat1 = document.getElementById("resultat1")
       // Afficher une boîte de dialogue pour demander une entrée
       let entreeUtilisateur1 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
-      // Vérifier si l'utilisateur a entré quelque chose (pas annulé ni vide) et c'est
-      if ((entreeUtilisateur1 == 2)) {
+      // Vérifier si l'utilisateur a entré la bonne réponse (2)
+      if (entreeUtilisateur1 == "2") {
           // Afficher le résultat sur la page
           paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement(mot5[0]).toUpperCase();
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
-      } else if (entreeUtilisateur1 !== 2){
-          paragrapheResultat1.textContent = "Vous avez eu la mauvaise réponse :(";
+      } else if (entreeUtilisateur1 !== "2"){
+          paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
       } else {
           paragrapheResultat1.textContent = "Vous avez annulé la saisie.";
+      }
+      break;
+    case ((longueur == 5) && (numIndice == 2)):
+      // Récupérer le bouton et l'élément pour afficher le résultat
+      let paragrapheResultat2 = document.getElementById("resultat2")
+      // Afficher une boîte de dialogue pour demander une entrée
+      let entreeUtilisateur2 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
+      // Vérifier si l'utilisateur a entré la bonne réponse (2)
+      if (entreeUtilisateur2 == 2) {
+          // Afficher le résultat sur la page
+          paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement(mot5[1]).toUpperCase();
+      } else if (entreeUtilisateur1 === "") {
+          paragrapheResultat2.textContent = "Vous n'avez rien saisi.";
+      } else if (entreeUtilisateur1 !== 2){
+          paragrapheResultat2.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+      } else {
+          paragrapheResultat2.textContent = "Vous avez annulé la saisie.";
       }
       break;
   }
