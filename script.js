@@ -23,13 +23,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte de dialogue pour demander une entrée
       let entreeUtilisateur1 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
       // Vérifier si l'utilisateur a entré quelque chose (pas annulé ni vide) et c'est
-      if ((entreeUtilisateur1 !== null) && (entreeUtilisateur1 !== "") && (entreeUtilisateur1 == 2)) {
+      if ((entreeUtilisateur1 == 2)) {
           // Afficher le résultat sur la page
           paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement(mot5[0]).toUpperCase();
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur1 !== 2){
-          paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse.";
+          paragrapheResultat1.textContent = "Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat1.textContent = "Vous avez annulé la saisie.";
       }
