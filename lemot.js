@@ -168,7 +168,7 @@ function activerLigneSuivante(ligneActuelle){
     if(prochaineLigne > 6){
         return;
     }
-    let boites = document.getElementByName("range" + prochaineLigne);
+    let boites = document.getElementsByName("range" + prochaineLigne);
 
     for(let i = 0; i<boites.length; i++){
         boites[i].disabled = false
