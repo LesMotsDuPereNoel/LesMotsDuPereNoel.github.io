@@ -23,6 +23,15 @@
     <button class="openbtn" onclick="openNav()"> Instructions</button>  
     </div>
 
+    <p align="right">
+        <input type="button" id = "bouton4" onclick="indice(6,1)" value="Indice 1" />
+    </p>
+    <p id="resultat4"></p>
+    <p align="right">
+        <input type="button" id = "bouton4" onclick="indice(6,2)" value="Indice 2" />
+    </p>
+    <p id="resultat5"></p>
+
     <script>  function moveOnMax(field, nextFieldID) {
       if (field.value.length >= field.maxLength) {
         document.getElementById(nextFieldID).focus();
