@@ -25,7 +25,7 @@ function indice(longueur, numIndice){
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
       if (entreeUtilisateur1 == "2") {
           // Donne la première lettre du mot si la réponse est bonne
-          paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement("mot5"[0]).toUpperCase();
+          paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement("mot5").toUpperCase().charAt[0];
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur1 !== "2"){
@@ -34,6 +34,7 @@ function indice(longueur, numIndice){
           paragrapheResultat1.textContent = "Vous avez annulé la saisie.";
       }
       break;
+
     case ((longueur == 5) && (numIndice == 2)):
       // Récupérer le bouton et l'élément pour afficher le résultat
       let paragrapheResultat2 = document.getElementById("resultat2")
@@ -42,7 +43,7 @@ function indice(longueur, numIndice){
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
       if (entreeUtilisateur2 == "4") {
           // Donne la première lettre du mot si la réponse est bonne
-          paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement("mot5"[1]).toUpperCase();
+          paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement("mot5").toUpperCase().charAt[1];
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat2.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur1 !== "4"){
@@ -51,6 +52,7 @@ function indice(longueur, numIndice){
           paragrapheResultat2.textContent = "Vous avez annulé la saisie.";
       }
       break;
+
     case ((longueur == 5) && (numIndice == 3)):
       // Récupérer le bouton et l'élément pour afficher le résultat
       let paragrapheResultat3 = document.getElementById("resultat3")
@@ -59,7 +61,7 @@ function indice(longueur, numIndice){
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
       if (entreeUtilisateur3 == "4") {
           // Donne la première lettre du mot si la réponse est bonne
-          paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getElement("mot5"[2]).toUpperCase();
+          paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getElement("mot5").toUpperCase().charAt[2];
       } else if (entreeUtilisateur3 === "") {
           paragrapheResultat3.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur3 !== "4"){
@@ -68,6 +70,7 @@ function indice(longueur, numIndice){
           paragrapheResultat3.textContent = "Vous avez annulé la saisie.";
       }
       break;
+
     case ((longueur == 6) && (numIndice == 1)):
       // Récupérer le bouton et l'élément pour afficher le résultat
       let paragrapheResultat4 = document.getElementById("resultat3")
@@ -76,7 +79,7 @@ function indice(longueur, numIndice){
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
       if (entreeUtilisateur4 == "13") {
           // Donne la première lettre du mot si la réponse est bonne
-          paragrapheResultat4.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement("mot6"[0]).toUpperCase();
+          paragrapheResultat4.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement("mot6").toUpperCase().charAt[0];
       } else if (entreeUtilisateur4 === "") {
           paragrapheResultat4.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur4 !== "13"){
@@ -85,6 +88,7 @@ function indice(longueur, numIndice){
           paragrapheResultat4.textContent = "Vous avez annulé la saisie.";
       }
       break;
+
     case ((longueur == 6) && (numIndice == 2)):
       // Récupérer le bouton et l'élément pour afficher le résultat
       let paragrapheResultat5 = document.getElementById("resultat3")
@@ -93,7 +97,7 @@ function indice(longueur, numIndice){
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
       if (entreeUtilisateur5 == "1") {
           // Donne la première lettre du mot si la réponse est bonne
-          paragrapheResultat5.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement("mot6"[1]).toUpperCase();
+          paragrapheResultat5.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement("mot6").toUpperCase().charAt[1];
       } else if (entreeUtilisateur5 === "") {
           paragrapheResultat5.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur5 !== "1"){
@@ -102,6 +106,7 @@ function indice(longueur, numIndice){
           paragrapheResultat5.textContent = "Vous avez annulé la saisie.";
       }
       break;
+
     case ((longueur == 7) && (numIndice == 1)):
       // Récupérer le bouton et l'élément pour afficher le résultat
       let paragrapheResultat6 = document.getElementById("resultat3")
@@ -110,7 +115,7 @@ function indice(longueur, numIndice){
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
       if (entreeUtilisateur6 == "4") {
           // Donne la première lettre du mot si la réponse est bonne
-          paragrapheResultat6.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement("mot7"[0]).toUpperCase();
+          paragrapheResultat6.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement("mot7").toUpperCase().charAt[0];
       } else if (entreeUtilisateur6 === "") {
           paragrapheResultat6.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur6 !== "4"){
