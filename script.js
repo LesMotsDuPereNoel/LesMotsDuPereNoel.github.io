@@ -38,17 +38,51 @@ function indice(longueur, numIndice){
       // Récupérer le bouton et l'élément pour afficher le résultat
       let paragrapheResultat2 = document.getElementById("resultat2")
       // Afficher une boîte de dialogue pour demander une entrée
-      let entreeUtilisateur2 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
+      let entreeUtilisateur2 = window.prompt("Quel est la valeur de x si 3x + 6 = 18?")
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
-      if (entreeUtilisateur2 == 2) {
+      if (entreeUtilisateur2 == "4") {
           // Afficher le résultat sur la page
           paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement(mot5[1]).toUpperCase();
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat2.textContent = "Vous n'avez rien saisi.";
-      } else if (entreeUtilisateur1 !== 2){
+      } else if (entreeUtilisateur1 !== "4"){
           paragrapheResultat2.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
       } else {
           paragrapheResultat2.textContent = "Vous avez annulé la saisie.";
+      }
+      break;
+    case ((longueur == 5) && (numIndice == 3)):
+      // Récupérer le bouton et l'élément pour afficher le résultat
+      let paragrapheResultat3 = document.getElementById("resultat3")
+      // Afficher une boîte de dialogue pour demander une entrée
+      let entreeUtilisateur3 = window.prompt("Quel est la valeur de x si 2x + 6 = 3x + 2?")
+      // Vérifier si l'utilisateur a entré la bonne réponse (2)
+      if (entreeUtilisateur3 == "4") {
+          // Afficher le résultat sur la page
+          paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getElement(mot5[2]).toUpperCase();
+      } else if (entreeUtilisateur3 === "") {
+          paragrapheResultat3.textContent = "Vous n'avez rien saisi.";
+      } else if (entreeUtilisateur3 !== "4"){
+          paragrapheResultat3.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+      } else {
+          paragrapheResultat3.textContent = "Vous avez annulé la saisie.";
+      }
+      break;
+    case ((longueur == 6) && (numIndice == 1)):
+      // Récupérer le bouton et l'élément pour afficher le résultat
+      let paragrapheResultat4 = document.getElementById("resultat3")
+      // Afficher une boîte de dialogue pour demander une entrée
+      let entreeUtilisateur4 = window.prompt("Si x = 9 détermine la valeur de 5x - 32. ")
+      // Vérifier si l'utilisateur a entré la bonne réponse (2)
+      if (entreeUtilisateur4 == "13") {
+          // Afficher le résultat sur la page
+          paragrapheResultat4.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement(mot6[0]).toUpperCase();
+      } else if (entreeUtilisateur4 === "") {
+          paragrapheResultat4.textContent = "Vous n'avez rien saisi.";
+      } else if (entreeUtilisateur4 !== "13"){
+          paragrapheResultat4.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+      } else {
+          paragrapheResultat4.textContent = "Vous avez annulé la saisie.";
       }
       break;
   }
