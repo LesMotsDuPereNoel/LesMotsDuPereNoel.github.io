@@ -162,8 +162,16 @@ function verifieMotEntre(ligne,longueur){
     }
     activerLigneSuivante(ligne)
 }
-function activerLigneSuivnate(ligneActuelle){
+function activerLigneSuivante(ligneActuelle){
     let prochaineLigne = ligneActuelle + 1
 
+    if(prochaineLigne > 6){
+        return;
+    }
+    let boites = document.getElementByName("range" + prochaineLigne);
+
+    for(let i = 0; i<boites.length; i++){
+        boites[i].disabled = false
+    }
 }
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
