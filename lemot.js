@@ -162,16 +162,53 @@ function verifieMotEntre(ligne,longueur){
     }
     activerLigneSuivante(ligne)
 }
+
+//Fonction pour activer les prochaines lignes
 function activerLigneSuivante(ligneActuelle){
     let prochaineLigne = ligneActuelle + 1
 
-    if(prochaineLigne > 6){
+    if (prochaineLigne > 6) {
         return;
     }
     let boites = document.getElementsByName("range" + prochaineLigne);
 
-    for(let i = 0; i<boites.length; i++){
+    for (let i = 0; i<boites.length; i++) {
         boites[i].disabled = false
+    }
+}
+
+//Fonction pour désactiver les prochaines rangés lorsque l'utilisateur a déja gagné
+function desactiveLignesSuivantes(ligneActuelle, longueur) {
+    let motReponse = "";
+    if (longueur == 5){
+        motReponse = localStorage.getItem("mot5").toUpperCase();
+    } else if (longueur == 6){
+        motReponse = localStorage.getItem("mot6").toUpperCase();
+    } else {
+        motReponse = localStorage.getItem("mot7").toUpperCase();
+    }
+    
+    let debut = (ligne - 1) * longueur + 1;
+
+    //Lire le mot entré
+    for (let i = 0; i < longueur; i++) {
+        motEntre += document.getElementById("boite" + (debut + i)).value;
+    }
+
+    //Vérifie chaque lettre
+    for (let i = 0; i < longueur; i++) {
+        let boite = document.getElementById("boite" + (debut + i));
+        let lettre = motEntre[i];
+        //Vérifie si l'utilisateur a gagné
+        if (lettre === motReponse[i]) {
+            let prochainesLignes = 6 - ligneActuelle
+            if (prochainesLignes != 6) {
+                let boites = document.getElementsByName("range" + prochainesLignes);
+                for (let i = 0; i < boites.length; i++) {
+                    boites[i].disabled = true;
+                }
+            }
+        }
     }
 }
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
