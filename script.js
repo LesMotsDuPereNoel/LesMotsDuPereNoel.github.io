@@ -44,9 +44,9 @@ function indice(longueur, numIndice){
       if ((entreeUtilisateur2 == "4") || (entreeUtilisateur2 == 4)) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement("mot5").toUpperCase().charAt[1];
-      } else if (entreeUtilisateur1 === "") {
+      } else if (entreeUtilisateur2 === "") {
           paragrapheResultat2.textContent = "Vous n'avez rien saisi.";
-      } else if (entreeUtilisateur1 !== "4"){
+      } else if (entreeUtilisateur2 !== "4"){
           paragrapheResultat2.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
       } else {
           paragrapheResultat2.textContent = "Vous avez annulé la saisie.";
@@ -64,7 +64,7 @@ function indice(longueur, numIndice){
           paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getElement("mot5").toUpperCase().charAt[2];
       } else if (entreeUtilisateur3 === "") {
           paragrapheResultat3.textContent = "Vous n'avez rien saisi.";
-      } else if (entreeUtilisateur3 !== "1"){
+      } else if (entreeUtilisateur3 !== "2"){
           paragrapheResultat3.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
       } else {
           paragrapheResultat3.textContent = "Vous avez annulé la saisie.";
