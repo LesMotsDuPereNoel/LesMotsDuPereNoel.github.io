@@ -85,6 +85,40 @@ function indice(longueur, numIndice){
           paragrapheResultat4.textContent = "Vous avez annulé la saisie.";
       }
       break;
+    case ((longueur == 6) && (numIndice == 2)):
+      // Récupérer le bouton et l'élément pour afficher le résultat
+      let paragrapheResultat5 = document.getElementById("resultat3")
+      // Afficher une boîte de dialogue pour demander une entrée
+      let entreeUtilisateur5 = window.prompt("Quel est la valeur de x si 6x + 3 = 5x + 4?")
+      // Vérifier si l'utilisateur a entré la bonne réponse (2)
+      if (entreeUtilisateur5 == "1") {
+          // Afficher le résultat sur la page
+          paragrapheResultat5.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getElement(mot6[1]).toUpperCase();
+      } else if (entreeUtilisateur5 === "") {
+          paragrapheResultat5.textContent = "Vous n'avez rien saisi.";
+      } else if (entreeUtilisateur5 !== "1"){
+          paragrapheResultat5.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+      } else {
+          paragrapheResultat5.textContent = "Vous avez annulé la saisie.";
+      }
+      break;
+    case ((longueur == 7) && (numIndice == 1)):
+      // Récupérer le bouton et l'élément pour afficher le résultat
+      let paragrapheResultat6 = document.getElementById("resultat3")
+      // Afficher une boîte de dialogue pour demander une entrée
+      let entreeUtilisateur6 = window.prompt("Quel est la valeur de x si 8x + 3 = 3x + 23")
+      // Vérifier si l'utilisateur a entré la bonne réponse (2)
+      if (entreeUtilisateur6 == "4") {
+          // Afficher le résultat sur la page
+          paragrapheResultat6.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getElement(mot7[0]).toUpperCase();
+      } else if (entreeUtilisateur6 === "") {
+          paragrapheResultat6.textContent = "Vous n'avez rien saisi.";
+      } else if (entreeUtilisateur6 !== "4"){
+          paragrapheResultat6.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+      } else {
+          paragrapheResultat6.textContent = "Vous avez annulé la saisie.";
+      }
+      break;
   }
 }
   
