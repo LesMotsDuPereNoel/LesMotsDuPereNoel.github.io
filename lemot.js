@@ -160,12 +160,10 @@ function verifieMotEntre(ligne,longueur){
         /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
         boite.disabled = true;
     }
-    toggleRow(2)
+    activerLigneSuivante(ligne)
 }
-function toggleRow(rowId){
-    for (let i = 1; i<longueur;i++){
-        var row = document.getElementById(rowId)
-        row.classList.toggle("active");
-    }
+function activerLigneSuivnate(ligneActuelle){
+    let prochaineLigne = ligneActuelle + 1
+
 }
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
