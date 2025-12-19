@@ -1,3 +1,4 @@
+//Sources pour toutes utilisation de Local storage : https://www.w3schools.com/jsref/prop_win_localstorage.asp
 let choix = 0//extraire le vrai choix de l'html mais suppose que c'est 5
 function choix5(){
 
