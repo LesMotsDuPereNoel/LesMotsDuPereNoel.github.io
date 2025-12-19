@@ -1,3 +1,4 @@
+/*Le code pour les prochaines 2 fonctions :https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar */
 function openNav() {
     document.getElementById("mySidebar").style.width = "400px";
     document.getElementById("main").style.marginLeft = "250px";
