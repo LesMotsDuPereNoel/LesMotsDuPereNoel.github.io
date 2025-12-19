@@ -159,6 +159,9 @@ function verifieMotEntre(ligne,longueur){
         }
         /* Source pour .disabled (aussi utilisé pour les bouttons de submission) https://youtu.be/xPRlztb5Nno?si=YRq5GkrHhDyE3gpe */ 
         boite.disabled = true;
+        if (motEntre === motReponse) {
+            return;
+        }
     }
     activerLigneSuivante(ligne)
 }
