@@ -73,7 +73,7 @@ function indice(longueur, numIndice){
 
     case ((longueur == 6) && (numIndice == 1)):
       // Récupérer le bouton et l'élément pour afficher le résultat
-      let paragrapheResultat4 = document.getElementById("resultat3")
+      let paragrapheResultat4 = document.getElementById("resultat4")
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur4 = window.prompt("Si x = 9 détermine la valeur de 5x - 32. ")
       // Vérifier si l'utilisateur a entré la bonne réponse (13)
@@ -91,7 +91,7 @@ function indice(longueur, numIndice){
 
     case ((longueur == 6) && (numIndice == 2)):
       // Récupérer le bouton et l'élément pour afficher le résultat
-      let paragrapheResultat5 = document.getElementById("resultat3")
+      let paragrapheResultat5 = document.getElementById("resultat5")
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur5 = window.prompt("Quel est la valeur de x si 6x + 3 = 5x + 4?")
       // Vérifier si l'utilisateur a entré la bonne réponse (1)
@@ -109,7 +109,7 @@ function indice(longueur, numIndice){
 
     case ((longueur == 7) && (numIndice == 1)):
       // Récupérer le bouton et l'élément pour afficher le résultat
-      let paragrapheResultat6 = document.getElementById("resultat3")
+      let paragrapheResultat6 = document.getElementById("resultat6")
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur6 = window.prompt("Quel est la valeur de x si 8x + 3 = 3x + 23")
       // Vérifier si l'utilisateur a entré la bonne réponse (4)
