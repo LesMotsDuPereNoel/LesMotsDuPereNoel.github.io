@@ -249,6 +249,7 @@ function verifieMotEntre(ligne,longueur){
     }
     //Arrêter le jeu lorsque l'utilisateur a deviner le mot
     if (motEntre === motReponse) {
+        alert("BRAVO VOUS AVEZ GAGNÉ")
         return;
     }
     activerLigneSuivante(ligne)
