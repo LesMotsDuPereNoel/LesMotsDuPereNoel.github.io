@@ -58,13 +58,13 @@ function indice(longueur, numIndice){
       let paragrapheResultat3 = document.getElementById("resultat3")
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur3 = window.prompt("Quel est la valeur de x si 2x + 6 = 3x + 2?")
-      // Vérifier si l'utilisateur a entré la bonne réponse (2)
-      if ((entreeUtilisateur3 == "2") || (entreeUtilisateur3 == 2)) {
+      // Vérifier si l'utilisateur a entré la bonne réponse (4)
+      if ((entreeUtilisateur3 == "4") || (entreeUtilisateur3 == 4)) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(2);
       } else if (entreeUtilisateur3 === "") {
           paragrapheResultat3.textContent = "Vous n'avez rien saisi.";
-      } else if (entreeUtilisateur3 !== "2"){
+      } else if (entreeUtilisateur3 !== "4"){
           paragrapheResultat3.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
       } else {
           paragrapheResultat3.textContent = "Vous avez annulé la saisie.";
