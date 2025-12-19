@@ -24,13 +24,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur1 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?")
       // Vérifier si l'utilisateur a entré la bonne réponse (2)
-      if ((entreeUtilisateur1 == "2") || (entreeUtilisateur1 == 2)) {
+      if (entreeUtilisateur1 == 2) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(0);
       } else if (entreeUtilisateur1 === "") {
           paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur1 !== "2"){
-          paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+          paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat1.textContent = "Vous avez annulé la saisie.";
       }
@@ -42,13 +42,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur2 = window.prompt("Quel est la valeur de x si 3x + 6 = 18?")
       // Vérifier si l'utilisateur a entré la bonne réponse (4)
-      if ((entreeUtilisateur2 == "4") || (entreeUtilisateur2 == 4)) {
+      if (entreeUtilisateur2 == 4) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(1);
       } else if (entreeUtilisateur2 === "") {
           paragrapheResultat2.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur2 !== "4"){
-          paragrapheResultat2.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+          paragrapheResultat2.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat2.textContent = "Vous avez annulé la saisie.";
       }
@@ -60,13 +60,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur3 = window.prompt("Quel est la valeur de x si 2x + 6 = 3x + 2?")
       // Vérifier si l'utilisateur a entré la bonne réponse (4)
-      if ((entreeUtilisateur3 == "4") || (entreeUtilisateur3 == 4)) {
+      if (entreeUtilisateur3 == 4) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(2);
       } else if (entreeUtilisateur3 === "") {
           paragrapheResultat3.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur3 !== "4"){
-          paragrapheResultat3.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+          paragrapheResultat3.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat3.textContent = "Vous avez annulé la saisie.";
       }
@@ -78,13 +78,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur4 = window.prompt("Si x = 9 détermine la valeur de 5x - 32. ")
       // Vérifier si l'utilisateur a entré la bonne réponse (13)
-      if ((entreeUtilisateur4 == "13") || (entreeUtilisateur4 == 13)) {
+      if (entreeUtilisateur4 == 13) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat4.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getItem("mot6").toUpperCase().charAt(0);
       } else if (entreeUtilisateur4 === "") {
           paragrapheResultat4.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur4 !== "13"){
-          paragrapheResultat4.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+          paragrapheResultat4.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat4.textContent = "Vous avez annulé la saisie.";
       }
@@ -96,13 +96,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur5 = window.prompt("Quel est la valeur de x si 6x + 3 = 5x + 4?")
       // Vérifier si l'utilisateur a entré la bonne réponse (1)
-      if ((entreeUtilisateur5 == "1") || (entreeUtilisateur5 == 1)) {
+      if (entreeUtilisateur5 == 1) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat5.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getItem("mot6").toUpperCase().charAt(1);
       } else if (entreeUtilisateur5 === "") {
           paragrapheResultat5.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur5 !== "1"){
-          paragrapheResultat5.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+          paragrapheResultat5.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat5.textContent = "Vous avez annulé la saisie.";
       }
@@ -114,13 +114,13 @@ function indice(longueur, numIndice){
       // Afficher une boîte pour demander une entrée
       let entreeUtilisateur6 = window.prompt("Quel est la valeur de x si 8x + 3 = 3x + 23")
       // Vérifier si l'utilisateur a entré la bonne réponse (4)
-      if ((entreeUtilisateur6 == "4") || (entreeUtilisateur6 == 4)) {
+      if (entreeUtilisateur6 == 4) {
           // Donne la première lettre du mot si la réponse est bonne
           paragrapheResultat6.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getItem("mot7").toUpperCase().charAt(0);
       } else if (entreeUtilisateur6 === "") {
           paragrapheResultat6.textContent = "Vous n'avez rien saisi.";
       } else if (entreeUtilisateur6 !== "4"){
-          paragrapheResultat6.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse";
+          paragrapheResultat6.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
       } else {
           paragrapheResultat6.textContent = "Vous avez annulé la saisie.";
       }
