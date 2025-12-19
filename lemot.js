@@ -2,7 +2,7 @@ let choix = 0//extraire le vrai choix de l'html mais suppose que c'est 5
 function choix5(){
 
     //Choisit un nombre  aléatoire de 0 à 9
-            let choixBanqueMot5 = Math.floor(Math.random() * 10)
+            let choixBanqueMot5 = Math.floor(Math.random() * 22)
             //Basé sur le nombre généré, choisit un mot à 5 lettres de la banque de mot ci-dessous
             switch (choixBanqueMot5){
                 case 0:
@@ -35,7 +35,42 @@ function choix5(){
                 case 9:
                     motReponse = "givre"
                     break;
-                return motReponse;
+                case 10:
+                    motReponse = "glace"
+                    break;
+                case 11:
+                    motReponse = "neige"
+                    break;
+                case 12:
+                    motReponse = "renne"
+                    break;
+                case 13:
+                    motReponse = "tuque"
+                    break;
+                case 14:
+                    motReponse = "igloo"
+                    break;
+                case 15:
+                    motReponse = "foyer"
+                    break;
+                case 16:
+                    motReponse = "brume"
+                    break;
+                case 17:
+                    motReponse = "decor"
+                    break;
+                case 18:
+                    motReponse = "polar"
+                    break;
+                case 19:
+                    motReponse = "patin"
+                    break;
+                case 20:
+                    motReponse = "blanc"
+                    break;
+                case 21:
+                    motReponse = "chaud"
+                    break;
 
             }
             localStorage.setItem("mot5", motReponse);
@@ -44,7 +79,7 @@ function choix5(){
 function choix6(){
 
             //Choisit un nombre  aléatoire de 0 à 9
-            let choixBanqueMot6 = Math.floor(Math.random() * 10)
+            let choixBanqueMot6 = Math.floor(Math.random() * 18)
             //Basé sur le nombre généré, choisit un mot à 6 lettres de la banque de mot ci-dessous
             switch (choixBanqueMot6){
                 case 0:
@@ -77,6 +112,30 @@ function choix6(){
                 case 9:
                     motReponse = "joyeux"
                     break;
+                case 10:
+                    motReponse = "bougie"
+                    break;
+                case 11:
+                    motReponse = "bonnet"
+                    break;
+                case 12:
+                    motReponse = "grelot"
+                    break;
+                case 13:
+                    motReponse = "gelure"
+                    break;
+                case 14:
+                    motReponse = "hockey"
+                    break;
+                case 15:
+                    motReponse = "skieur"
+                    break;
+                case 16:
+                    motReponse = "chalet"
+                    break;
+                case 17:
+                    motReponse = "aurore"
+                    break;
             }
             localStorage.setItem("mot6", motReponse);
 }
@@ -84,7 +143,7 @@ function choix6(){
 function choix7(){
 
             //Choisit un nombre  aléatoire de 0 à 9
-            let choixBanqueMot7 = Math.floor(Math.random() * 10)
+            let choixBanqueMot7 = Math.floor(Math.random() * 19)
             //Basé sur le nombre généré, choisit un mot à 7 lettres de la banque de mot ci-dessous
             switch (choixBanqueMot7){
                 case 0:
@@ -116,6 +175,33 @@ function choix7(){
                     break;
                 case 9:
                     motReponse = "chorale"
+                    break;
+                case 10:
+                    motReponse = "manteau"
+                    break;
+                case 11:
+                    motReponse = "polaire"
+                    break;
+                case 12:
+                    motReponse = "tempete"
+                    break;
+                case 13:
+                    motReponse = "givrage"
+                    break;
+                case 14:
+                    motReponse = "verglas"
+                    break;
+                case 15:
+                    motReponse = "mitaine"
+                    break;
+                case 16:
+                    motReponse = "cagoule"
+                    break;
+                case 17:
+                    motReponse = "glacial"
+                    break;
+                case 18:
+                    motReponse = "blouson"
                     break;
     }
     localStorage.setItem("mot7", motReponse);
