@@ -1,39 +1,20 @@
 <!DOCTYPE html>
-<!-- Ça me tentait de changer des choses pour améliorer le jeux. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <html>
   <head>
     <title>Les mots du Père Noël!</title>
-    <!--Code pour la barre d'instruction  :https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body style="background-color:  #F8F8FF;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="2style.css"/>
     <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <!--Les instructions de notre code-->
       <center><h4>Comment jouer ?</h4>
-      <p>Ce jeu reprend le même concept que le Wordle, mais avec les mathématiques et en français avec le thématique d'hiver et Noël.</p> 
-      <p>Chaque jeu, un mot de la longueur de 5 lettres et 3 indices, 6 lettres et 2 indices ou 7 lettres  et 1 indice est choisi aléatoirement.</p>
+      <p>Ce jeu reprend le même concept que le Wordle, mais avec les mathématiques et en français avec le thématique d'hiver et Noël.</p>
+      <p>Chaque jeu, un mot de la longueur de 5 lettres et 3 indices, 6 lettres et 2 indices ou 7 lettres et 1 indice est choisi aléatoirement.</p>
       <p>Vous devez le deviner en 6 essais. À chaque essai, les lettres du mot que vous avez proposé changeront de couleur en fonction de à quel point vous êtes proche de le trouver.</p>
       <p>Si une lettre devient verte : Cette lettre est dans la bonne place.</p>
       <p>Si une lettre devient jaune : Cette lettre est dans le mot mais dans la mauvaise place.</p>
@@ -42,33 +23,36 @@
     </div>
 
     <div id="main">
-      <button class="openbtn" onclick="openNav()"> Instructions</button>  
+      <button class="openbtn" onclick="openNav()">☰ Instructions</button>
+      <button class="changeurVersion" onclick="window.location.href='index.html'">
+        Passer à la version originale
+      </button>
+      <button class="infoVersion" onclick="alert('J\'ai créé une nouvelle version du jeu pour l\'améliorer : meilleur design, boutons plus clairs et une expérience plus agréable. Tu peux revenir à la version originale n\'importe quand avec le bouton à côté.')">
+  Pourquoi une nouvelle version ?
+</button>
     </div>
-    <center>
-        <button class="changeurVersion" onclick="window.location.href='index.html'">
-        Passer à l'ancienne Version
-    </center>
-    
-    <center><h1>Les Mots du Père Noël</h1></center>
-    <center><img src="https://www.ninacosford.com/wp-content/uploads/2021/10/IMG_3418.gif" width="15%"/></center>
-    <center><h2>Choisis une difficulté :</h2></center>
 
-    <center>
-      <!--Les boutons pour aller aux 3 difficultés de notre jeu-->
-    <a href="difficulte1.html">
-      <button class="button button1" onclick="choix5()">5 Lettres et 3 Indices</button>
-    </a>
-    <a href="difficulte2.html">
-      <button class="button button2" onclick="choix6()">6 Lettres et 2 Indices</button>
-    </a>
-    <a href="difficulte3.html">
-      <button class="button button3" onclick="choix7()">7 Lettres et 1 Indice</button>
-    </a>
-    </center>
+    <div class="hero">
+      <h1>Les Mots du Père Noël</h1>
+      <img src="https://www.ninacosford.com/wp-content/uploads/2021/10/IMG_3418.gif" width="15%"/>
+      <h2>Choisis une difficulté :</h2>
+
+      <div class="button-row">
+        <a href="difficulte1.html">
+          <button class="button button1" onclick="choix5()">5 Lettres <span>et 3 Indices</span></button>
+        </a>
+        <a href="difficulte2.html">
+          <button class="button button2" onclick="choix6()">6 Lettres <span>et 2 Indices</span></button>
+        </a>
+        <a href="difficulte3.html">
+          <button class="button button3" onclick="choix7()">7 Lettres <span>et 1 Indice</span></button>
+        </a>
+      </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="lemot.js"></script>
     <script src="2pere.js"></script>
   </body>
-</html> 
+</html>
 <!--Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette-->
