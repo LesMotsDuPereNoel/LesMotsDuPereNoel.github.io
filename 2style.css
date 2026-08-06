@@ -5,6 +5,9 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'Quicksand', sans-serif;
   background-color: #F8F8FF;
 }
@@ -18,11 +21,16 @@ html {
 /* Barre du haut */
 #main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 40px;
   padding: 16px;
+}
+
+.openbtn, .changeurVersion, .infoVersion {
+  font-size: 17px;
+  padding: 14px 24px;
 }
 
 @media screen and (max-width: 600px) {
@@ -41,6 +49,11 @@ html {
 
 /* Centre */
 .hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   max-width: 700px;
   margin: 2rem auto;
