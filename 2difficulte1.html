@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="2style.css" />
 </head>
 <body>
-    <a href="2index.html"><img src="https://icons.veryicon.com/png/o/miscellaneous/small-face-icon/left-arrow-28.png" width="75"/></a>
-
     <!-- Le div pour la barre d'instruction et le bouton -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -23,23 +21,23 @@
         </center>
     </div>
 
+    <!-- Retour, Instructions et les 3 indices, tous sur la même ligne -->
     <div id="main">
+        <a href="2index.html"><img src="https://icons.veryicon.com/png/o/miscellaneous/small-face-icon/left-arrow-28.png" width="45"/></a>
         <button class="openbtn" onclick="openNav()">Instructions</button>
+        <div class="indice-item">
+            <input type="button" id="bouton1" onclick="indice(5,1)" value="Indice 1" />
+            <p id="resultat1"></p>
+        </div>
+        <div class="indice-item">
+            <input type="button" id="bouton2" onclick="indice(5,2)" value="Indice 2" />
+            <p id="resultat2"></p>
+        </div>
+        <div class="indice-item">
+            <input type="button" id="bouton3" onclick="indice(5,3)" value="Indice 3" />
+            <p id="resultat3"></p>
+        </div>
     </div>
-
-    <!-- Les boutons de nos indices -->
-    <p align="right">
-        <input type="button" id="bouton1" onclick="indice(5,1)" value="Indice 1" />
-    </p>
-    <p id="resultat1"></p>
-    <p align="right">
-        <input type="button" id="bouton2" onclick="indice(5,2)" value="Indice 2" />
-    </p>
-    <p id="resultat2"></p>
-    <p align="right">
-        <input type="button" id="bouton3" onclick="indice(5,3)" value="Indice 3" />
-    </p>
-    <p id="resultat3"></p>
 
     <!-- Les boites de notre jeu -->
     <center><h1>Les Mots du Père Noël</h1></center>
@@ -48,57 +46,57 @@
     <table border="1">
         <tbody>
             <tr id="1">
-                <td width="75"><center><input type="text" style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite1" data-index="0" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite2')" /></center></td>
-                <td width="75"><center><input type="text" style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite2" data-index="1" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite3')" /></center></td>
-                <td width="75"><center><input type="text" style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite3" data-index="2" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite4')" /></center></td>
-                <td width="75"><center><input type="text" style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite4" data-index="3" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite5')" /></center></td>
-                <td width="75"><center><input type="text" style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite5" data-index="4" size="1" maxlength="1" /></center></td>
+                <td width="75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite1" data-index="0" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite2')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite2" data-index="1" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite3')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite3" data-index="2" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite4')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite4" data-index="3" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite5')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range1" id="boite5" data-index="4" size="1" maxlength="1" style="border: none"/></center></td>
                 <td><button id="sub1" onclick="verifieMotEntre(1,5)">Soumettre</button></td>
             </tr>
             <tr id="2">
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite6" data-index="5" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite7')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite7" data-index="6" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite8')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite8" data-index="7" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite9')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite9" data-index="8" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite10')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite10" data-index="9" size="1" maxlength="1" /></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite6" data-index="5" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite7')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite7" data-index="6" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite8')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite8" data-index="7" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite9')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite9" data-index="8" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite10')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range2" id="boite10" data-index="9" size="1" maxlength="1" style="border: none"/></center></td>
                 <td><button id="sub2" disabled onclick="verifieMotEntre(2,5)">Soumettre</button></td>
             </tr>
             <tr id="3">
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite11" data-index="10" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite12')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite12" data-index="11" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite13')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite13" data-index="12" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite14')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite14" data-index="13" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite15')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite15" data-index="14" size="1" maxlength="1" /></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite11" data-index="10" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite12')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite12" data-index="11" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite13')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite13" data-index="12" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite14')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite14" data-index="13" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite15')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range3" id="boite15" data-index="14" size="1" maxlength="1" style="border: none"/></center></td>
                 <td><button id="sub3" disabled onclick="verifieMotEntre(3,5)">Soumettre</button></td>
             </tr>
             <tr id="4">
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite16" data-index="15" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite17')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite17" data-index="16" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite18')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite18" data-index="17" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite19')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite19" data-index="18" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite20')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite20" data-index="19" size="1" maxlength="1" /></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite16" data-index="15" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite17')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite17" data-index="16" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite18')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite18" data-index="17" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite19')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite19" data-index="18" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite20')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range4" id="boite20" data-index="19" size="1" maxlength="1" style="border: none"/></center></td>
                 <td><button id="sub4" disabled onclick="verifieMotEntre(4,5)">Soumettre</button></td>
             </tr>
             <tr id="5">
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite21" data-index="20" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite22')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite22" data-index="21" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite23')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite23" data-index="22" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite24')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite24" data-index="23" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite25')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite25" data-index="24" size="1" maxlength="1" /></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite21" data-index="20" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite22')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite22" data-index="21" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite23')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite23" data-index="22" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite24')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite24" data-index="23" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite25')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range5" id="boite25" data-index="24" size="1" maxlength="1" style="border: none"/></center></td>
                 <td><button id="sub5" disabled onclick="verifieMotEntre(5,5)">Soumettre</button></td>
             </tr>
             <tr id="6">
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite26" data-index="25" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite27')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite27" data-index="26" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite28')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite28" data-index="27" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite29')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite29" data-index="28" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite30')" /></center></td>
-                <td width="75"><center><input type="text" disabled style="height:75px;font-size:20pt; text-align: center; text-transform: uppercase; border: none;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite30" data-index="29" size="1" maxlength="1" /></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite26" data-index="25" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite27')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite27" data-index="26" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite28')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite28" data-index="27" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite29')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite29" data-index="28" size="1" maxlength="1" onkeyup="moveOnMax(this, 'boite30')" style="border: none"/></center></td>
+                <td width="75"><center><input type="text" disabled input style= "height:75px;font-size:20pt; text-align: center; text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();this.value = this.value.replace(/[^a-zA-Z]/g, '');" name="range6" id="boite30" data-index="29" size="1" maxlength="1" style="border: none"/></center></td>
                 <td><button id="sub6" disabled onclick="verifieMotEntre(6,5)">Soumettre</button></td>
             </tr>
         </tbody>
     </table>
     </center>
-    <p id="demo" style="color:white;"></p>
+    <p id="demo"></p>
 
     <script src="nouveauJs.js"></script>
 </body>
