@@ -17,93 +17,51 @@ function moveOnMax(field, nextFieldID) {
     }
 }
 
-//Fonction qui demande une question pour reçevoir un indice
-function indice(longueur, numIndice) {
-    switch (true) {
-        case ((longueur == 5) && (numIndice == 1)): {
-            let paragrapheResultat1 = document.getElementById("resultat1");
-            let entreeUtilisateur1 = window.prompt("Quel est la valeur de x si 5x + 2 = 12?");
-            if (entreeUtilisateur1 == 2) {
-                paragrapheResultat1.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(0);
-            } else if (entreeUtilisateur1 === "") {
-                paragrapheResultat1.textContent = "Vous n'avez rien saisi.";
-            } else if (entreeUtilisateur1 !== null) {
-                paragrapheResultat1.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
-            } else {
-                paragrapheResultat1.textContent = "Vous avez annulé la saisie.";
-            }
-            break;
+//Nouveau système d'indices : un seul bouton. Chaque clic révèle une lettre
+//du mot secret qui n'a pas encore été trouvée (verte) dans les essais précédents.
+//Le nombre d'indices disponibles dépend de la difficulté (3 pour 5 lettres).
+const LONGUEUR_MOT = 5;
+const MAX_INDICES = 3;
+
+//Un true à la position i veut dire que cette lettre est déjà connue
+//(trouvée en vert dans un essai, ou déjà révélée par un indice).
+let lettresTrouvees = new Array(LONGUEUR_MOT).fill(false);
+let indicesUtilises = 0;
+
+function donnerIndice() {
+    let bouton = document.getElementById("boutonIndice");
+    let paragrapheResultat = document.getElementById("resultatIndice");
+
+    if (indicesUtilises >= MAX_INDICES) {
+        bouton.disabled = true;
+        return;
+    }
+
+    let motReponse = localStorage.getItem("mot5").toUpperCase();
+
+    //Cherche les positions dont la lettre n'est pas encore connue
+    let positionsRestantes = [];
+    for (let i = 0; i < LONGUEUR_MOT; i++) {
+        if (!lettresTrouvees[i]) {
+            positionsRestantes.push(i);
         }
-        case ((longueur == 5) && (numIndice == 2)): {
-            let paragrapheResultat2 = document.getElementById("resultat2");
-            let entreeUtilisateur2 = window.prompt("Quel est la valeur de x si 3x + 6 = 18?");
-            if (entreeUtilisateur2 == 4) {
-                paragrapheResultat2.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(1);
-            } else if (entreeUtilisateur2 === "") {
-                paragrapheResultat2.textContent = "Vous n'avez rien saisi.";
-            } else if (entreeUtilisateur2 !== null) {
-                paragrapheResultat2.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
-            } else {
-                paragrapheResultat2.textContent = "Vous avez annulé la saisie.";
-            }
-            break;
-        }
-        case ((longueur == 5) && (numIndice == 3)): {
-            let paragrapheResultat3 = document.getElementById("resultat3");
-            let entreeUtilisateur3 = window.prompt("Quel est la valeur de x si 2x + 6 = 3x + 2?");
-            if (entreeUtilisateur3 == 4) {
-                paragrapheResultat3.textContent = "Bonne réponse! La troisième lettre du mot que vous cherchez est : " + localStorage.getItem("mot5").toUpperCase().charAt(2);
-            } else if (entreeUtilisateur3 === "") {
-                paragrapheResultat3.textContent = "Vous n'avez rien saisi.";
-            } else if (entreeUtilisateur3 !== null) {
-                paragrapheResultat3.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
-            } else {
-                paragrapheResultat3.textContent = "Vous avez annulé la saisie.";
-            }
-            break;
-        }
-        case ((longueur == 6) && (numIndice == 1)): {
-            let paragrapheResultat4 = document.getElementById("resultat4");
-            let entreeUtilisateur4 = window.prompt("Si x = 9 détermine la valeur de 5x - 32. ");
-            if (entreeUtilisateur4 == 13) {
-                paragrapheResultat4.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getItem("mot6").toUpperCase().charAt(0);
-            } else if (entreeUtilisateur4 === "") {
-                paragrapheResultat4.textContent = "Vous n'avez rien saisi.";
-            } else if (entreeUtilisateur4 !== null) {
-                paragrapheResultat4.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
-            } else {
-                paragrapheResultat4.textContent = "Vous avez annulé la saisie.";
-            }
-            break;
-        }
-        case ((longueur == 6) && (numIndice == 2)): {
-            let paragrapheResultat5 = document.getElementById("resultat5");
-            let entreeUtilisateur5 = window.prompt("Quel est la valeur de x si 6x + 3 = 5x + 4?");
-            if (entreeUtilisateur5 == 1) {
-                paragrapheResultat5.textContent = "Bonne réponse! La deuxième lettre du mot que vous cherchez est : " + localStorage.getItem("mot6").toUpperCase().charAt(1);
-            } else if (entreeUtilisateur5 === "") {
-                paragrapheResultat5.textContent = "Vous n'avez rien saisi.";
-            } else if (entreeUtilisateur5 !== null) {
-                paragrapheResultat5.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
-            } else {
-                paragrapheResultat5.textContent = "Vous avez annulé la saisie.";
-            }
-            break;
-        }
-        case ((longueur == 7) && (numIndice == 1)): {
-            let paragrapheResultat6 = document.getElementById("resultat6");
-            let entreeUtilisateur6 = window.prompt("Quel est la valeur de x si 8x + 3 = 3x + 23");
-            if (entreeUtilisateur6 == 4) {
-                paragrapheResultat6.textContent = "Bonne réponse! La première lettre du mot que vous cherchez est : " + localStorage.getItem("mot7").toUpperCase().charAt(0);
-            } else if (entreeUtilisateur6 === "") {
-                paragrapheResultat6.textContent = "Vous n'avez rien saisi.";
-            } else if (entreeUtilisateur6 !== null) {
-                paragrapheResultat6.textContent = "Womp Womp Womp. Vous avez eu la mauvaise réponse :(";
-            } else {
-                paragrapheResultat6.textContent = "Vous avez annulé la saisie.";
-            }
-            break;
-        }
+    }
+
+    if (positionsRestantes.length === 0) {
+        paragrapheResultat.textContent = "Vous avez déjà toutes les lettres!";
+        bouton.disabled = true;
+        return;
+    }
+
+    //Choisit une position au hasard parmi celles qui restent à trouver
+    let position = positionsRestantes[Math.floor(Math.random() * positionsRestantes.length)];
+    lettresTrouvees[position] = true;
+
+    paragrapheResultat.textContent = "La lettre en position " + (position + 1) + " est : " + motReponse.charAt(position);
+
+    indicesUtilises++;
+    if (indicesUtilises >= MAX_INDICES) {
+        bouton.disabled = true;
     }
 }
 //Auteurs : Emilio Bosi, Richard Théberge et Christopher Bissonnette
@@ -227,6 +185,9 @@ function verifieMotEntre(ligne, longueur) {
 
         if (lettre === motReponse[i]) {
             boite.style.backgroundColor = "green";
+            if (longueur === LONGUEUR_MOT) {
+                lettresTrouvees[i] = true;
+            }
         } else if (motReponse.includes(lettre)) {
             boite.style.backgroundColor = "gold";
         } else {
