@@ -91,6 +91,17 @@
     </center>
     <p id="demo"></p>
 
+    <!-- Fenêtre pop-up affichée quand le mot est trouvé -->
+    <div id="popupVictoire" class="popup-overlay">
+        <div class="popup-box">
+            <h2>🎉 Bravo, vous avez gagné!</h2>
+            <p>Série de victoires : <strong id="statStreak"></strong></p>
+            <p>Parties jouées : <strong id="statJoues"></strong></p>
+            <p>Pourcentage de victoires : <strong id="statPourcentage"></strong></p>
+            <button class="openbtn" onclick="rejouer()">Rejouer</button>
+        </div>
+    </div>
+
     <script src="nouveauJs.js"></script>
 </body>
 </html>

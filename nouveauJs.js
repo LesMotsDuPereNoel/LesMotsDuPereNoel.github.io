@@ -202,8 +202,13 @@ function verifieMotEntre(ligne, longueur) {
     if (motEntre === motReponse) {
         gameWon = true;
         document.getElementById("sub" + ligne).disabled = true;
-        alert("BRAVO VOUS AVEZ GAGNÉ");
+        afficherPopupVictoire();
         return;
+    }
+
+    //Si c'était le dernier essai et que le mot n'a pas été trouvé, la partie est perdue
+    if (ligne === 6) {
+        miseAJourStats(false);
     }
 
     activerLigneSuivante(ligne);
@@ -224,6 +229,49 @@ function activerLigneSuivante(ligneActuelle) {
 }
 
 // Auteurs : Richard Théberge, Emilio Bosi et Christopher Bissonnette
+
+
+/* ===================== Statistiques et fenêtre de victoire ===================== */
+//Ces statistiques sont gardées dans le localStorage, donc elles restent
+//d'une partie à l'autre (même après avoir rechargé la page).
+
+//Met à jour les statistiques après une partie (gagnée ou perdue) et les retourne
+function miseAJourStats(partieGagnee) {
+    let jeuxJoues = parseInt(localStorage.getItem("jeuxJoues")) || 0;
+    let jeuxGagnes = parseInt(localStorage.getItem("jeuxGagnes")) || 0;
+    let winStreak = parseInt(localStorage.getItem("winStreak")) || 0;
+
+    jeuxJoues++;
+    if (partieGagnee) {
+        jeuxGagnes++;
+        winStreak++;
+    } else {
+        winStreak = 0;
+    }
+
+    localStorage.setItem("jeuxJoues", jeuxJoues);
+    localStorage.setItem("jeuxGagnes", jeuxGagnes);
+    localStorage.setItem("winStreak", winStreak);
+
+    return { jeuxJoues, jeuxGagnes, winStreak };
+}
+
+//Affiche la fenêtre pop-up de victoire avec les statistiques à jour
+function afficherPopupVictoire() {
+    let stats = miseAJourStats(true);
+    let pourcentage = Math.round((stats.jeuxGagnes / stats.jeuxJoues) * 100);
+
+    document.getElementById("statStreak").textContent = stats.winStreak;
+    document.getElementById("statJoues").textContent = stats.jeuxJoues;
+    document.getElementById("statPourcentage").textContent = pourcentage + "%";
+
+    document.getElementById("popupVictoire").style.display = "flex";
+}
+
+//Recharge la page pour commencer une nouvelle partie
+function rejouer() {
+    location.reload();
+}
 
 
 /* ===================== Logique des boutons Soumettre ===================== */
