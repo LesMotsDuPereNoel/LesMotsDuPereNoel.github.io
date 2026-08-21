@@ -11,9 +11,27 @@ function closeNav() {
 }
 
 // Source pour la fonction qui fait que quand tu tappes, tu vas au prochain textbox : https://stackoverflow.com/questions/1959398/moving-a-focus-when-the-input-text-field-reaches-a-max-length
-function moveOnMax(field, nextFieldID) {
+function moveOnMax(evenement, field, nextFieldID) {
+    //Ignore Backspace : sinon, en revenant sur la case précédente (déjà pleine),
+    //ce onkeyup pensait qu'il fallait avancer, ce qui ramenait à la case d'origine.
+    if (evenement.key === "Backspace") {
+        return;
+    }
     if (field.value.length >= field.maxLength) {
         document.getElementById(nextFieldID).focus();
+    }
+}
+
+//Quand on appuie sur Backspace : efface la case actuelle et retourne à la case précédente
+function moveOnBackspace(evenement, field, prevFieldID) {
+    if (evenement.key === "Backspace") {
+        //Empêche le navigateur d'effacer aussi un caractère lui-même,
+        //ce qui causait une double suppression une fois le focus déplacé.
+        evenement.preventDefault();
+        field.value = "";
+        if (prevFieldID) {
+            document.getElementById(prevFieldID).focus();
+        }
     }
 }
 
@@ -341,4 +359,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Choisit un nouveau mot secret de 5 lettres à chaque chargement de la page
     choix5();
     document.getElementById("demo").innerHTML = localStorage.getItem("mot5");
+
+    // Appuyer sur Entrée soumet la ligne active (celle dont le bouton Soumettre n'est pas désactivé)
+    document.addEventListener("keyup", (evenement) => {
+        if (evenement.key === "Enter") {
+            for (let i = 1; i <= 6; i++) {
+                let bouton = document.getElementById("sub" + i);
+                if (bouton && !bouton.disabled) {
+                    bouton.click();
+                    break;
+                }
+            }
+        }
+    });
 });
