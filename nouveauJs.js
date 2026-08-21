@@ -358,7 +358,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Choisit un nouveau mot secret de 5 lettres à chaque chargement de la page
     choix5();
-    document.getElementById("demo").innerHTML = localStorage.getItem("mot5");
 
     // Appuyer sur Entrée soumet la ligne active (celle dont le bouton Soumettre n'est pas désactivé)
     document.addEventListener("keyup", (evenement) => {

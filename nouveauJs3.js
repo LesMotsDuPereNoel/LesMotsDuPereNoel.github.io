@@ -363,7 +363,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Choisit un nouveau mot secret de 7 lettres à chaque chargement de la page
     choix7();
-    document.getElementById("demo").innerHTML = localStorage.getItem("mot7");
 
     // Appuyer sur Entrée soumet la ligne active (celle dont le bouton Soumettre n'est pas désactivé)
     document.addEventListener("keyup", (evenement) => {
