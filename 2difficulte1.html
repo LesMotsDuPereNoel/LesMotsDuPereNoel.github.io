@@ -91,10 +91,12 @@
     </center>
     <p id="demo"></p>
 
-    <!-- Fenêtre pop-up affichée quand le mot est trouvé -->
+    <!-- Fenêtre pop-up affichée à la fin de la partie (gagnée ou perdue) -->
     <div id="popupVictoire" class="popup-overlay">
         <div class="popup-box">
-            <h2>🎉 Bravo, vous avez gagné!</h2>
+            <button class="popup-close" onclick="fermerPopup()" aria-label="Fermer">×</button>
+            <h2 id="popupTitre"></h2>
+            <p id="popupMotSecret"></p>
             <p>Série de victoires : <strong id="statStreak"></strong></p>
             <p>Parties jouées : <strong id="statJoues"></strong></p>
             <p>Pourcentage de victoires : <strong id="statPourcentage"></strong></p>

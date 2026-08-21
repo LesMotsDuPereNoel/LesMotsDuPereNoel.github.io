@@ -202,13 +202,14 @@ function verifieMotEntre(ligne, longueur) {
     if (motEntre === motReponse) {
         gameWon = true;
         document.getElementById("sub" + ligne).disabled = true;
-        afficherPopupVictoire();
+        afficherPopup(true);
         return;
     }
 
     //Si c'était le dernier essai et que le mot n'a pas été trouvé, la partie est perdue
     if (ligne === 6) {
-        miseAJourStats(false);
+        afficherPopup(false);
+        return;
     }
 
     activerLigneSuivante(ligne);
@@ -256,16 +257,32 @@ function miseAJourStats(partieGagnee) {
     return { jeuxJoues, jeuxGagnes, winStreak };
 }
 
-//Affiche la fenêtre pop-up de victoire avec les statistiques à jour
-function afficherPopupVictoire() {
-    let stats = miseAJourStats(true);
+//Affiche la fenêtre pop-up de fin de partie (victoire ou défaite) avec les statistiques à jour
+function afficherPopup(partieGagnee) {
+    let stats = miseAJourStats(partieGagnee);
     let pourcentage = Math.round((stats.jeuxGagnes / stats.jeuxJoues) * 100);
+
+    let titre = document.getElementById("popupTitre");
+    let motSecret = document.getElementById("popupMotSecret");
+
+    if (partieGagnee) {
+        titre.textContent = "🎉 Bravo, vous avez gagné!";
+        motSecret.textContent = "";
+    } else {
+        titre.textContent = "😢 Dommage, vous avez perdu!";
+        motSecret.textContent = "Le mot était : " + localStorage.getItem("mot5").toUpperCase();
+    }
 
     document.getElementById("statStreak").textContent = stats.winStreak;
     document.getElementById("statJoues").textContent = stats.jeuxJoues;
     document.getElementById("statPourcentage").textContent = pourcentage + "%";
 
     document.getElementById("popupVictoire").style.display = "flex";
+}
+
+//Ferme la fenêtre pop-up sans recharger la page
+function fermerPopup() {
+    document.getElementById("popupVictoire").style.display = "none";
 }
 
 //Recharge la page pour commencer une nouvelle partie
