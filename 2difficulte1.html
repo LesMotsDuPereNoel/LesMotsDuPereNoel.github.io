@@ -18,7 +18,7 @@
             <p>Si une lettre devient verte : Cette lettre est dans la bonne place.</p>
             <p>Si une lettre devient jaune : Cette lettre est dans le mot mais dans la mauvaise place.</p>
             <p>Si une lettre devient grise : Cette lettre n'est pas dans le mot.</p>
-            <p>De plus, si vous avez besoin d'un indice vous pouvez cliquer le bouton d'indice pour résoudre un problème de mathématique et recevoir un indice.</p>
+            <p>De plus, vous pouvez cliquer sur le bouton Indice pour révéler une lettre du mot que vous n'avez pas encore trouvée en vert. Le nombre d'indices est limité selon la difficulté (3 pour cette difficulté).</p>
         </center>
     </div>
 
@@ -27,16 +27,8 @@
         <a href="2index.html"><img src="https://icons.veryicon.com/png/o/miscellaneous/small-face-icon/left-arrow-28.png" width="45"/></a>
         <button class="openbtn" onclick="openNav()">Instructions</button>
         <div class="indice-item">
-            <input type="button" id="bouton1" onclick="indice(5,1)" value="Indice 1" />
-            <p id="resultat1"></p>
-        </div>
-        <div class="indice-item">
-            <input type="button" id="bouton2" onclick="indice(5,2)" value="Indice 2" />
-            <p id="resultat2"></p>
-        </div>
-        <div class="indice-item">
-            <input type="button" id="bouton3" onclick="indice(5,3)" value="Indice 3" />
-            <p id="resultat3"></p>
+            <input type="button" id="boutonIndice" onclick="donnerIndice()" value="Indice" />
+            <p id="resultatIndice"></p>
         </div>
     </div>
 
